@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>PersonalInfo</title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.td_left{
+				padding-top: 20px;
+			}
+			.td_right{
+				padding-left: 50px;
+				padding-top: 20px;
+
+			}
+
+		</style>
+
+	</head>
+	<body style="background-color: white;" >
+			<a href="index2.html" target="_top">
+				<img src="images/logo/logo.png" alt="logo images" style="margin-top: 20px;">
+			</a>
+			<h2 align="center">Personal Information</h2>
+			<br />
+			<hr />
+			<br />
+			<div id="user">
+				<table  style="border: none; margin-left: 30%;">
+					<tr>
+						<td class="td_left">Name:</td>
+						<td class="td_right">{{username}}</td>
+					</tr>
+					<tr>
+						<td class="td_left">Sex:</td>
+						<td class="td_right">{{usersex}}</td>
+					</tr>
+					<tr>
+						<td class="td_left">Tel:</td>
+						<td class="td_right">{{usertel}}</td>
+					</tr>
+					<tr>
+						<td class="td_left">Email:</td>
+						<td class="td_right">{{useremail}}</td>
+					</tr>
+				
+				</table>
+			</div>
+	</body>
+	<script src="js/vendor/jquery-3.2.1.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/plugins.js"></script>
+	<script src="js/active.js"></script>
+	<script type="text/javascript" src="js/vue.js" ></script>
+	<script type="text/javascript" src="js/personalinfo.js" ></script>
+</html>

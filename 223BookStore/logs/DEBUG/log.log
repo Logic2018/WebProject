@@ -1,0 +1,13 @@
+[ERROR] 2018-08-30 19:25:39,774 method:top.ttt.util.DBUtil.<clinit>(DBUtil.java:54)
+java.lang.ClassNotFoundException: com.mysql.jdbc.Driver
+java.lang.ClassNotFoundException: com.mysql.jdbc.Driver
+	at top.ttt.util.DBUtil.<clinit>(DBUtil.java:54)
+	at top.ttt.dao.impl.UserInfoDao.getAllUser(UserInfoDao.java:16)
+	at top.ttt.test.Test01.main(Test01.java:11)
+[ERROR] 2018-08-30 19:25:39,933 method:top.ttt.util.DBUtil.getConnection(DBUtil.java:69)
+java.sql.SQLException: No suitable driver found for jdbc:mysql://127.0.0.1:3306/test?useUnicode=yes&amp;characterEncoding=UTF-8
+java.sql.SQLException: No suitable driver found for jdbc:mysql://127.0.0.1:3306/test?useUnicode=yes&amp;characterEncoding=UTF-8
+	at top.ttt.util.DBUtil.getConnection(DBUtil.java:69)
+	at top.ttt.util.DBUtil.executeQuery(DBUtil.java:78)
+	at top.ttt.dao.impl.UserInfoDao.getAllUser(UserInfoDao.java:16)
+	at top.ttt.test.Test01.main(Test01.java:11)

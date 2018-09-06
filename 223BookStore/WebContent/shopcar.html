@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="style.css">
+	<script src="js/vendor/jquery-3.2.1.min.js"></script>
+	<script src="js/vendor/modernizr-3.5.0.min.js"></script>
+	<script type="text/javascript" src="js/vue.js" ></script>
+	<title>Cart</title>
+	</head>
+	<body>
+		<a href="index2.html" target="_top">
+			<img src="images/logo/logo.png" alt="logo images" style="margin-top: 20px;">
+		</a>
+		<div id="wrapper" class="minicart-content-wrapper" >
+			<h1 align="center">Cart</h1>
+			<div class="single__items" v-for="goods in cartList">
+				<div class="miniproduct">
+					<div class="item01 d-flex">
+						<div>
+							<a href="single-product.html">
+								<img v-bind:src="goods.goods_picture" alt="product images" width="80px" height="120px" style="margin-right: 250px;">
+							</a>
+						</div>
+						<div class="content" style="padding-top: 20px;">
+							<h6><a href="single-product.html">{{goods.goods_name}}</a></h6>
+							<span class="prize">${{goods.goods_price}}
+								<input type="button" value="X" @click="del(goods.goods_id)" style="margin-left: 95%; border:solid black;  background-color: white; border-radius: 30px; font-weight: 100;"/>
+							</span>
+							<div class="product_prize d-flex justify-content-between">
+								<span class="qun">x{{goods.goods_num}}</span>
+								<ul class="d-flex justify-content-end">
+									<li><a href="#"><i class="zmdi zmdi-settings"></i></a></li>
+									<li><a href="#"><i class="zmdi zmdi-delete"></i></a></li>
+								</ul>
+							</div>
+							
+						</div>
+						
+					</div>				
+				</div>
+			</div>
+
+			<div class="total_amount text-right">
+				<span style="font-size: 10px;">Cart Subtotal</span>
+				<br />
+				<span>${{allprice}}</span>
+			</div>
+			<div class="mini_action cart">
+				<a class="checkout__btn" href="#">Pay Now</a>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/shopcar.js" ></script>				
+	</body>
+</html>
